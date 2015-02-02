@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>Top Animation</title>
+    <link rel="stylesheet" href="style.css">
+
+<script src="../../bower_components/angular/angular.js"></script>
+
+<script src="../../bower_components/angular-animate/angular-animate.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+<style type="text/css">
+.reveal-animation.ng-enter {
+  -webkit-animation: enter_sequence 1s linear; /* Safari/Chrome */
+  animation: enter_sequence 1s linear; /* IE10+ and Future Browsers */
+}
+@-webkit-keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+@keyframes enter_sequence {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+</style>
+
+<div class="view-container">
+  <div ng-view class="reveal-animation"></div>
+</div>
+
+
+</body>
+</html>
