@@ -1,3 +1,8 @@
+div.navigation{
+	padding-top: 1rem;
+	text-align: right;
+}
+
 
 /*----------       Basic CSS      ------------*/
 
@@ -156,7 +161,7 @@ background-color: blue;
 /*------------------------------fligh detial------------------------------*/
 img.flight-logo{
 
-	max-width: 100px;
+	max-width: 100%;
     height: auto;
     width: auto;
 	
@@ -186,6 +191,9 @@ img.small-logo{
 	margin-bottom: 5px;
 	float:right;
 	
+}
+.row.filteringItem{
+	padding: 1rem 0;
 }
 
 
