@@ -21,7 +21,5 @@ flightinfoApp.controller('DropdownCtrl', ['$scope', function($scope) {
       {name:'Two-Stop'}
     ];
     $scope.myStop = $scope.FlightStop[0]; 
-
-
     
-  }]);
+}]);
