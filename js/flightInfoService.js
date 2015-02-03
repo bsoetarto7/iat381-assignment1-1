@@ -16,11 +16,11 @@ flightinfoApp.service('InfoService', function() {
 
   // Destination variables
   var addDestinationInfo = function(newObj) {
-      DestinationInfoitems=newObj;
+      DestinationInfoItems=newObj;
   }
 
   var getDestinationInfo = function(){
-      return DestinationInfoitems;
+      return DestinationInfoItems;
   }
 
 

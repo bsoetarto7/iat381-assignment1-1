@@ -10,7 +10,7 @@ flightinfoApp.controller('TypeaheadCtrl', function($scope, InfoService) {
 
   $scope.onSelect2 = function ($item) {
     $scope.$item = $item;
-    InfoService.addDestinationInfor($item);
+    InfoService.addDestinationInfo($item);
   };
 
 });
