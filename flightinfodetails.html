@@ -20,8 +20,7 @@
 <!-- the body of current stage, support swipe fetures, 
 default page shows infos, allow to expand
 when swipe, setting page shown, support additional filters -->
-<div ng-app="ngSwipeRight" class='container flightinfo-type1'>
-  <div class="detailInfo" ng-show="!showActions" ng-swipe-left="showActions = true">
+
 
     <!-- banner of page, showing user depart, destinate locations -->
     <div ng-app="ngAnimate" class="container">
@@ -63,7 +62,6 @@ when swipe, setting page shown, support additional filters -->
     <!-- showing all found flight info -->
     <div class="container">
          <div class="row">
-
           <ul class="list-group box-of-flight animate-container">
             <li class="list-group-item box-of-flight animate-repeat" 
             ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
@@ -131,90 +129,6 @@ when swipe, setting page shown, support additional filters -->
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="container sideMenu" ng-show="showActions" ng-swipe-right="showActions = false" >
-
-    <accordion close-others=false>
-      <accordion-group >
-        <accordion-heading> pricing </accordion-heading>
-
-        <div class="btn-group" dropdown is-open="status.isopen">
-          <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle  ng-disabled="disabled">
-            Currency <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li ng-repeat="price in prices ">
-              {{price.name}}
-            </li>
-          </ul>
-              <!-- 
-                  <pre>
-                    $scope.demo1 = {
-                        min: 20,
-                        max: 80
-                    };</pre>
-
-
-              <div class="container" ng-controller="DemoController">
-                <div range-slider min="0" max="100" model-min="demo1.min" model-max="demo1.max"></div>
-              </div> -->
-
-        </div>
-      </accordion-group>
-
-      <accordion-group>
-        <accordion-heading> air line </accordion-heading>
-
-        <div class="sideMenuCheck"> 
-          <label class="checkbox" ng-repeat="info in flightInfo ">
-            <input type="checkbox" checked>
-            {{info.Air_line}}
-          </label>
-        </div>
-      </accordion-group>
-
-      <accordion-group >
-        <accordion-heading> motify dates</accordion-heading>
-        <div class="row sideMenuTimeChange">
-          <div class="col-xs-12">
-            <div class="panel panel-default">
-              <div class="panel-heading flighinfo">
-                <h3 >Leaving</h3>
-              </div>
-              <div class="panel-body">
-                <p class="input-group" ng-controller="DatepickerCtrl">
-                  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" ng-change="change()" close-text="Close"/>
-                  <span class="input-group-btn">
-                    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                  </span>
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row sideMenuTimeChange">
-          <div class="col-xs-12">
-            <div class="panel panel-default">
-              <div class="panel-heading flighinfo">
-                <h3 >Returning</h3>
-              </div>
-              <div class="panel-body">
-                <p class="input-group" ng-controller="DatepickerCtrl2">
-                  <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" ng-change="change()" close-text="Close" />
-                  <span class="input-group-btn">
-                    <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-                  </span>
-
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </accordion-group>
-    </accordion>
   </div>
 </div>
 
