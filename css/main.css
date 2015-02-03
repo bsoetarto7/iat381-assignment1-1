@@ -250,13 +250,13 @@ img.small-logo{
 
 }
 
-select{
+select.select-FI{
 	font-size:19px;
 	background-color: #e0e0e0;
 	width: 100%;
 }
 
-select:focus{
+select.select-FI:focus{
 	background-color: white;
 }
 
@@ -273,7 +273,6 @@ div.sideMenu{
 
 .example-animate-container {
   background:white;
-  border:1px solid black;
   list-style:none;
   margin:0;
   padding:0 10px;
