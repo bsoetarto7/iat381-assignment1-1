@@ -1,6 +1,6 @@
 flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
   $scope.flightInfo = [
-    {'Flight': 'AC997',
+{'Flight': 'AC997',
      'leaving': 0910,
      'returning:': 1030,
      'price': 2000,
@@ -25,12 +25,12 @@ flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
      'Air_line': 'Delta Air Lines',
      'image': 'Delta.png',
 
-     'leavingFlightNo': 'AC999',
+     'leavingFlightNo': 'DL4849',
      'departLocationL' : 'Vanvouer',
      'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 1745,
+     'arrivelTimeL': 1245,
 
-     'returningFlightNo' : 'AC979',
+     'returningFlightNo' : 'DL9379',
      'departLocationR' : 'Hong Kong',
      'arriveLocationR' : 'Vanvouer',
      'arrivelTimeR': 1025
@@ -42,12 +42,12 @@ flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
      'Air_line': 'WestJet',
      'image': 'WestJet.png',
 
-     'leavingFlightNo': 'AC999',
+     'leavingFlightNo': 'Ws3255',
      'departLocationL' : 'Vanvouer',
      'arriveLocationL' : 'Hong Kong',
      'arrivelTimeL': 1745,
 
-     'returningFlightNo' : 'AC979',
+     'returningFlightNo' : 'Ws3479',
      'departLocationR' : 'Hong Kong',
      'arriveLocationR' : 'Vanvouer',
      'arrivelTimeR': 1025
@@ -60,12 +60,12 @@ flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
      'Air_line': 'Cathay Pacific Airways',
      'image': 'CathayPacific.png',
 
-     'leavingFlightNo': 'AC999',
+     'leavingFlightNo': 'CX839',
      'departLocationL' : 'Vanvouer',
      'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 1745,
+     'arrivelTimeL': 2145,
 
-     'returningFlightNo' : 'AC979',
+     'returningFlightNo' : 'CX888',
      'departLocationR' : 'Hong Kong',
      'arriveLocationR' : 'Vanvouer',
      'arrivelTimeR': 1025
