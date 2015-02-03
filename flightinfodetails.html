@@ -1,19 +1,25 @@
-<nav class="navbar navbar-default navbar-fixed-top">
- <div class="col-xs-2">
-  <img class="small-logo" src="img/logo.png" width="40">
 
-</div>
-<div class="col-xs-5">
-  <h2 class="small-title">Ticket Bird</h2>
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavCtrl">
+  <div class="col-xs-2">
+    <a href="#/home"><img class="small-logo" src="img/logo.png" width="40"></a>
+<!-- 
+  </div>
+  <div class="col-xs-5">
+    <h2 class="small-title">Ticket Bird</h2> -->
 
-</div>
-<div class="col-xs-5">
-  <ul ng-controller="NavCtrl">
-   <li ng-repeat="nav in NavBar">
-    <a href="#{{nav.LinkName}}">{{nav.name}}</a>
-  </li>
-</ul>
-</div>
+  </div>
+    <div class="col-xs-10 ">
+    <div class="list-styled">
+      <ul ng-controller="NavCtrl">
+        <li ng-repeat="nav in NavBar">
+          <a href="#{{nav.LinkName}}">{{nav.name}}</a>
+          <span>{{nav.Arrow}}</span>
+        </li>
+
+      </ul>
+      </div>
+
+    </div>
 </nav>
 
 <div ng-app="ngSwipeRight" class='container flightinfo-type1'>
