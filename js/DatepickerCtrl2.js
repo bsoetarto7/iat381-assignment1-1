@@ -1,4 +1,4 @@
-flightinfoApp.controller('DatepickerCtrl2', function ($scope) {
+flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
@@ -13,6 +13,14 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope) {
     return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
   };
 
+  $scope.change = function() {
+    var item = (String($scope.dt)).split(" ");
+    var Fitem = item[2] + item[1]  + item[3];
+    InfoService.addReturningInfo(Fitem);
+    console.log(InfoService.getReturningInfo());
+
+  };
+
   $scope.toggleMin = function() {
     $scope.minDate = $scope.minDate ? null : new Date();
   };
@@ -23,7 +31,6 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope) {
     $event.stopPropagation();
 
     $scope.opened = true;
-    console.log("hello");
   };
   $scope.dateOptions = {
     formatYear: 'yy',
