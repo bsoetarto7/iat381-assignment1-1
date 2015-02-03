@@ -31,15 +31,20 @@
      <option value="price">price</option>
    </li>
   </select>
-   <ul class="list-group box-of-flight">
 
-      <div class="row ">
+  <div ng-app="ngAnimate">
+          {{flightInfo.length}} search found:
+
+
+   <ul class="list-group box-of-flight example-animate-container">
+
+      <div class="row">
          <input type="text" ng-model="search" class="search-query" style="width: 80px">
 
-        <li class="list-group-item box-of-flight" 
+        <li class="list-group-item box-of-flight animate-repeat" 
         ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
 
-          <details>
+          <details >
               <summary>
                <div class="col-xs-5"><img class="flight-logo" ng-src="img/{{info.image}}">
                </div>
@@ -85,9 +90,10 @@
           </details>
 
          </li>
+         
        </div>
    </ul>
-
+   </div>
 </div>
 
 
@@ -128,7 +134,6 @@
           </accordion-group>
 
 
-
           <accordion-group>
              <accordion-heading>
                  air line
@@ -152,3 +157,5 @@
 
    </div>
 </div>
+
+
