@@ -1,18 +1,16 @@
-flightinfoApp.controller('TypeaheadCtrl', function($scope, $http) {
+flightinfoApp.controller('TypeaheadCtrl', function($scope, InfoService) {
 
   $scope.selected = undefined;
-  $scope.states = ['YVR- Vancouver International Airport', 'HKG - Hong Kong International Airport', 'SEA - Seattle International Airport'];
-  // Any function returning a promise object can be used to load values asynchronously
-  $scope.getLocation = function(val) {
-    return $http.get('http://maps.googleapis.com/maps/api/geocode/json', {
-      params: {
-        address: val,
-        sensor: false
-      }
-    }).then(function(response){
-      return response.data.results.map(function(item){
-        return item.formatted_address;
-      });
-    });
+  $scope.states = ['YVR - Vancouver International Airport', 'HKG - Hong Kong International Airport', 'SEA - Seattle International Airport'];
+
+  $scope.onSelect = function ($item) {
+    $scope.$item = $item;
+    InfoService.addFromInfo($item);
   };
+
+  $scope.onSelect2 = function ($item) {
+    $scope.$item = $item;
+    InfoService.addDestinationInfor($item);
+  };
+
 });

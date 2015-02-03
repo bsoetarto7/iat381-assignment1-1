@@ -1,7 +1,57 @@
-body{
-	/*background-image: url(../img/background.png);*/
-	background-size: 100%;
+
+/*----------       Basic CSS      ------------*/
+
+
+ul{
+	padding-top:15px;
+	list-style: none;
 }
+
+.list-styled li{
+	display: inline;
+}
+
+button {
+
+
+}
+
+
+button:active {
+	font-size:18px;
+	border:2px solid red;
+
+}
+
+
+
+img.background{
+	position: fixed;
+}
+
+div.homeBG{
+	margin: -1px 0 0 -2px;
+	background-image: url(../img/background.png);
+	height: 102%;
+}
+
+body{
+	
+	font-family: 'Open Sans', sans-serif;
+	 background-color: #eaeaea;
+	
+}
+
+.bird{
+	padding-top:20%;
+}
+
+.title{
+	font-weight:900;
+	font-size:38px;
+	padding-bottom: 20px;
+}
+
 header{
 	text-align: center;
 	margin: 0 auto;
@@ -24,9 +74,35 @@ h3{
 	opacity: 0.5;
 }
 
+/*-----------------------------button-----------------------------*/ 
 
 .btn.btn-default.btn-lg{
-	background-color: blue;
+
+	
+	font-size: 18px;
+	border: 2x solid gray;
+	background-color: #7c7c7c;
+	opacity: 0.4;
+}
+
+.btn.btn-default{
+	border:none;
+	padding:none;
+	margin:none;
+}
+.glyphicon.glyphicon-calendar{
+	font-size: 200%;
+	
+	padding-top:-1;
+	margin-top:-4;
+
+}
+
+.btn.btn-default.btn-lg:focus{
+	font-size: 18px;
+	border: 2x solid gray;
+	background-color: #7c7c7c;
+background-color: blue;
 }
 
 .glyphicon-plane{
@@ -42,7 +118,11 @@ h3{
 }
 
 .homebuttons{
+		font-size: 18px;
+	border: 2x solid gray;
 	text-align: center;
+	padding : 20px;
+
 }
 
 .container.home{
@@ -63,14 +143,17 @@ h3{
 
 	text-decoration: none;
 	color: white;
+	margin-bottom: 10px;
+
 }
+	
 
 .panel-heading.flighinfo{
 	background-color: white;
 	border-bottom: none;
 }
 
-
+/*------------------------------fligh detial------------------------------*/
 img.flight-logo{
 
 	max-width: 80px;
@@ -102,4 +185,123 @@ img.small-logo{
 	margin-bottom: 20px;
 	margin-left:75%;
 	
+}
+
+
+/*------------------------------Flight info--------------------------------*/
+.checkbox{
+	background: none;
+}
+
+.form-control{
+	background-color:#e0e0e0;
+	
+}
+
+.form-control:focus{
+	background-color:white;
+	opacity:1;
+	border-style:none;
+	
+}
+
+.row.home-type2{
+	margin: 0 auto;
+	max-width:70%;
+}
+
+.homeCheckB{
+	background-color: white;
+	opacity: 0.5;
+
+}
+
+.panel.panel-default{
+	background-color:white;
+	
+
+}
+
+.DatepickerCtrl2.input-group{
+	background-color: black;
+}
+
+.submit-style{
+	margin-bottom: 20px;
+	margin-top:-13;
+}
+
+.glyphicon-calendar{
+	width: 330%;
+	height:230%;
+}
+
+.glyphicon{
+	width:120%;
+	height:190%;
+}
+
+.panel.panel-default {
+	/*background-color: black;*/
+}
+
+.dropdown-style {
+	margin: 10px;
+
+}
+
+select{
+	font-size:19px;
+	background-color: #e0e0e0;
+	width: 100%;
+}
+
+select:focus{
+	background-color: white;
+}
+
+
+
+
+div.sideMenu{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top:75px;
+	left: 100px;
+}
+
+.example-animate-container {
+  background:white;
+  border:1px solid black;
+  list-style:none;
+  margin:0;
+  padding:0 10px;
+}
+
+.animate-repeat {
+  line-height:40px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
 }

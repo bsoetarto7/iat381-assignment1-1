@@ -16,12 +16,10 @@
 </div>
 </nav>
 
-
 <div ng-app="ngSwipeRight" class='container flightinfo-type1'>
+ <div class="detailInfo" ng-show="!showActions" ng-swipe-left="showActions = true">
 
- <div ng-show="!showActions" ng-swipe-left="showActions = true">
 
-  
    <select ng-model="orderProp" class='selectBar'>
     <li class="list-group-item"> 
      <option value="Air_line">Air line</option>
@@ -33,13 +31,20 @@
      <option value="price">price</option>
    </li>
   </select>
-   <ul class="list-group box-of-flight">
 
-      <div class="row ">
+  <div ng-app="ngAnimate">
+          {{flightInfo.length}} search found:
 
-        <li class="list-group-item box-of-flight" ng-repeat="info in flightInfo | orderBy:orderProp | filter: search: strict" >
 
-          <details>
+   <ul class="list-group box-of-flight example-animate-container">
+
+      <div class="row">
+         <input type="text" ng-model="search" class="search-query" style="width: 80px">
+
+        <li class="list-group-item box-of-flight animate-repeat" 
+        ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
+
+          <details >
               <summary>
                <div class="col-xs-5"><img class="flight-logo" ng-src="img/{{info.image}}">
                </div>
@@ -85,12 +90,14 @@
           </details>
 
          </li>
+         
        </div>
    </ul>
-
+   </div>
 </div>
 
-  <div ng-show="showActions" ng-swipe-right="showActions = false">
+
+<div class="container sideMenu" ng-show="showActions" ng-swipe-right="showActions = false" >
 
 
         <accordion close-others=false>
@@ -111,7 +118,7 @@
                   </li>
                 </ul>
               </div>
-
+<!-- 
                   <pre>
                     $scope.demo1 = {
                         min: 20,
@@ -121,14 +128,13 @@
 
               <div class="container" ng-controller="DemoController">
                 <div range-slider min="0" max="100" model-min="demo1.min" model-max="demo1.max"></div>
-              </div>
+              </div> -->
 
            </div>
-
           </accordion-group>
 
 
-          <accordion-group >
+          <accordion-group>
              <accordion-heading>
                  air line
               </accordion-heading>
@@ -138,16 +144,18 @@
               {{info.Air_line}}
           </label>
           </accordion-group>
+
+
+          <accordion-group >
+             <accordion-heading>
+                 motify dates
+              </accordion-heading>
+              
+           </accordion-group>
+
         </accordion>
 
-
-
-  </div>
+   </div>
 </div>
-
-
-
-
-
 
 
