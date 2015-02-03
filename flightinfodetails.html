@@ -3,7 +3,7 @@
   <div class="col-xs-2">
     <a href="#/home"><img class="small-logo" src="img/logo.png" width="40"></a>
   </div>
-  <div class="col-xs-10">
+  <div class="col-xs-10 navigation">
     <div class="list-styled">
       <ul ng-controller="NavCtrl">
         <li ng-repeat="nav in NavBar">
@@ -18,92 +18,119 @@
 
 
 <div ng-app="ngSwipeRight" class='container flightinfo-type1'>
- <div class="detailInfo" ng-show="!showActions" ng-swipe-left="showActions = true">
-  <div ng-app="ngAnimate" class="container">
-  <div class="row goingLocation">
+  <div class="detailInfo" ng-show="!showActions" ng-swipe-left="showActions = true">
+    <div ng-app="ngAnimate" class="container">
+      <div class="row goingLocation">
 
 
-    <div class="col-xs-4">
-     <h1 class="title">{{inputDepartLocation}}</h1>
-    </div>
-    <div class="col-xs-4">
-     <h1 class="title"> ----</h1>
-    </div>
-    <div class="col-xs-4">
-     <h1 class="title">{{inputArriveLocation}}</h1>
-    </div>
-
-      <div class='container filteringItem'>
-      quick search: 
-       <input type="text" ng-model="search" class="search-query" style="width: 80px">
-
-       <select ng-model="orderProp" class='selectBar'>
-         <li class="list-group-item"> 
-           <option value="Air_line">Air line</option>
-         </li>
-         <li class="list-group-item"> 
-           <option value="leaving">leaving time</option>
-         </li>
-         <li class="list-group-item"> 
-           <option value="price">price</option>
-         </li>
-      </select>
-     </div>
-
-  </div>
-   <div class="row">
-
-   <ul class="list-group box-of-flight animate-container">
-    <li class="list-group-item box-of-flight animate-repeat" 
-    ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
-
-    <details >
-      <summary>
-       <div class="col-xs-5"><img class="flight-logo" ng-src="img/{{info.image}}">
-       </div>
-
-       <div class"col-xs-7">
-        <div>Air line: {{info.Air_line}}</div>
-        <div>Flight: {{info.Flight}}</div>
-        <div>Leaving: {{info.leaving}}</div>
-        <div>Price: {{info.price}}</div>
+      <div class="col-xs-4">
+        <h1 class="title">{{inputDepartLocation}}</h1>
       </div>
-    </summary>
+      <div class="col-xs-4">
+        <h1 class="title"> ----</h1>
+      </div>
+      <div class="col-xs-4">
+        <h1 class="title">{{inputArriveLocation}}</h1>
+      </div>
+    </div>
 
-    <p>
-     <p class="col-xs-4"> Depart</p>
-     <div class="col-xs-8"> 
-       Flight No : {{info.leavingFlightNo}}
-     </div>
-     <div>
-       Depart Location : {{info.departLocationL}}
-     </div>
-     <div class="col-xs-8">
-       Arrivel Location : {{info.arriveLocationL}}
-     </div>
-     <div class="col-xs-8">
-       Arrive Time: {{info.arrivelTimeL}}
-     </div>
+      <div class='row filteringItem'>
+        <div class="col-xs-9">
+          Search: 
+          <input type="text" ng-model="search" class="search-query" style="width: 80px">
+        </div>
 
-     <p class="col-xs-4">Return</p>
-     <div class="col-xs-8"> 
-       Flight No : {{info.returningFlightNo}}
-     </div>
-     <div>
-       Depart Location : {{info.departLocationR}}
-     </div>
-     <div class="col-xs-8">
-       Arrivel Location : {{info.arriveLocationR}}
-     </div>
-     <div class="col-xs-8">
-       rrive Time: {{info.arrivelTimeR}}
-     </div>
-   </p>
- </details>
+        <div class="col-xs-3">
+          <select ng-model="orderProp" class='selectBar'>
+             <li class="list-group-item"> 
+               <option value="Air_line">Air line</option>
+             </li>
+             <li class="list-group-item"> 
+               <option value="leaving">Time</option>
+             </li>
+             <li class="list-group-item"> 
+               <option value="price">Price</option>
+             </li>
+          </select>
 
-</li>
-</ul>
-</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+         <div class="row">
+
+           <ul class="list-group box-of-flight animate-container">
+            <li class="list-group-item box-of-flight animate-repeat" 
+            ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
+
+            <details >
+              <summary>
+                <div class="row">
+               <div class="col-xs-5">
+                <img class="flight-logo" ng-src="img/{{info.image}}">
+               </div>
+
+               <div class"col-xs-7">
+                <div>Air line: {{info.Air_line}}</div>
+                <div>Flight: {{info.Flight}}</div>
+                <div>Leaving: {{info.leaving}}</div>
+                <div>Price: {{info.price}}</div>
+              </div>
+            </div>
+            </summary>
+            <div class="row">
+              <div class="col-xs-12">
+                 <h4>Depart<h4>
+              </div>
+            
+            </div>
+           <div class="row">
+             <div class="col-xs-12"> 
+               Flight No : {{info.leavingFlightNo}}
+             </div>
+             
+               <div class="col-xs-12">
+               Depart Location : {{info.departLocationL}}
+             </div>
+             <div class="col-xs-12">
+               Arrival Location : {{info.arriveLocationL}}
+             </div>
+             <div class="col-xs-12">
+               Arrive Time: {{info.arrivelTimeL}}
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col-xs-12">
+                 <h4>Return<h4>
+              </div>
+           </div>
+
+           <div class="row">
+             <div class="col-xs-12"> 
+               Flight No : {{info.returningFlightNo}}
+             </div>
+               <div class="col-xs-12">
+               Depart Location : {{info.departLocationR}}
+             </div>
+             <div class="col-xs-12">
+               Arrival Location : {{info.arriveLocationR}}
+             </div>
+             <div class="col-xs-12">
+               Arrive Time: {{info.arrivelTimeR}}
+             </div>
+
+            </div>
+         </details>
+
+          </li>
+          </ul>
+        </div>
+
+
+    </div>
+
+
 
 </div>
 </div>
