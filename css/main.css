@@ -3,7 +3,7 @@
 
 
 ul{
-	padding-top:15px;
+	/*padding-top:15px;*/
 	list-style: none;
 }
 
@@ -118,7 +118,7 @@ background-color: blue;
 }
 
 .homebuttons{
-		font-size: 18px;
+	font-size: 18px;
 	border: 2x solid gray;
 	text-align: center;
 	padding : 20px;
@@ -156,7 +156,7 @@ background-color: blue;
 /*------------------------------fligh detial------------------------------*/
 img.flight-logo{
 
-	max-width: 80px;
+	max-width: 100px;
     height: auto;
     width: auto;
 	
@@ -181,16 +181,31 @@ img.small-logo{
 	margin-top: 0.4rem;
 	/*margin-left: 2rem;*/
 }
+
 .selectBar{
-	margin-bottom: 20px;
-	margin-left:75%;
+	margin-bottom: 5px;
+	float:right;
 	
 }
 
 
 /*------------------------------Flight info--------------------------------*/
-.checkbox{
-	background: none;
+.input-group-addon.home{
+    padding:0;
+    margin-right: 1rem;
+    border:0;
+    background-color: rgba(0,0,0, .3);
+    width:30px;
+
+    
+    
+}
+
+p.home{
+    margin: 0 0 0 1rem;
+}
+.homeCheckbox{
+    font-size:20rem; 
 }
 
 .form-control{
@@ -241,46 +256,78 @@ img.small-logo{
 	height:190%;
 }
 
-.panel.panel-default {
-	/*background-color: black;*/
-}
 
 .dropdown-style {
 	margin: 10px;
 
 }
 
-select{
+.search-query{
+	background-color:#e0e0e0;
+	opacity:1;
+	/*border-radius: 5px;*/
+	font-size: 12px;
+}
+
+.search-query:focus{
+	background-color:white;
+	opacity:1;
+}
+select.select-FI{
 	font-size:19px;
 	background-color: #e0e0e0;
 	width: 100%;
 }
 
-select:focus{
+select.select-FI:focus{
 	background-color: white;
 }
 
+.row.goingLocation{
+	background-image: url(../img/cloud.png);
+	background-size: 100%;
+	margin-top: -30px;
+}
 
+h1.title{
+	margin-top: 60%;
+	font-weight: lighter;
+	color: white;
+}
 
+.container.filteringItem{
+	margin-top: 40%; 
+	background: white;
+	padding: 2% 5% 2% 5%; 
+	opacity: 0.85;
+}
 
 div.sideMenu{
-	position: fixed;
+	position: absolute;
 	height: 100%;
 	width: 100%;
 	top:75px;
-	left: 100px;
+	left: 30px;
 }
 
-.example-animate-container {
-  background:white;
-  border:1px solid black;
+
+div.sideMenuTimeChange{
+	width: 100%;
+
+}
+div.sideMenuCheck{
+	width: 80%;
+	margin-left: 15px;
+}
+
+.animate-container {
   list-style:none;
   margin:0;
-  padding:0 10px;
 }
 
 .animate-repeat {
-  line-height:40px;
+  background: white;
+  line-height:25px;
   list-style:none;
   box-sizing:border-box;
 }
