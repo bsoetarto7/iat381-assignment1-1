@@ -5,9 +5,9 @@ var flightinfoApp = angular.module('flightinfoApp', [
 flightinfoApp.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/home', {
-                templateUrl: 'homebody.html'
-            }).
+            // when('/home', {
+            //     templateUrl: 'homebody.html'
+            // }).
             when('/page2',{
                 // flight form page
                 templateUrl:'flightinfo.html'
@@ -18,7 +18,7 @@ flightinfoApp.config(['$routeProvider',
                 controller: 'FlightDetailedCtrl'
             }).
             otherwise({
-                redirectTo: '/home'
+                redirectTo: '/page2'
             });
     }
 ]);
