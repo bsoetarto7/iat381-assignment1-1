@@ -2,7 +2,14 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
-  $scope.today();
+  // $scope.today();
+
+  if(!InfoService.getReturningInfo()){
+    $scope.today();
+  }
+  else{
+    $scope.dt=InfoService.getKeepReturningInfo();
+  }
 
   $scope.clear = function () {
     $scope.dt = null;
@@ -16,8 +23,7 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
   $scope.change = function() {
     var item = (String($scope.dt)).split(" ");
     var Fitem = item[2] + item[1]  + item[3];
-    InfoService.addReturningInfo(Fitem);
-    console.log(InfoService.getReturningInfo());
+    InfoService.addReturningInfo(Fitem,$scope.dt);
 
   };
 
