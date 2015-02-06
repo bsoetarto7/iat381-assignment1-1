@@ -19,6 +19,7 @@ span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.gl
 /*----------       Basic CSS      ------------*/
 
 
+
 ul{
 	/*padding-top:15px;*/
 	list-style: none;
@@ -63,10 +64,11 @@ body{
 	padding-top:20%;
 }
 
-.title{
-	font-weight:900;
+h4.title{
+	font-weight:400;
 	font-size:38px;
 	padding-bottom: 20px;
+    color:black;
 }
 
 header{
@@ -134,7 +136,7 @@ background-color: blue;
 	margin-top: 2rem;
 }
 .container.flightinfo-type1{
-	margin-top: 80px;
+	padding-top: 20px;
 	
 
 }
@@ -159,6 +161,11 @@ background-color: blue;
 }
 
 /*------------------------------fligh detial------------------------------*/
+.containertype-3{
+    padding-bottom: 120px;
+}
+
+
 img.flight-logo{
 
 	max-width: 100%;
@@ -198,6 +205,12 @@ img.small-logo{
 
 
 /*------------------------------Flight info--------------------------------*/
+.main-title{
+    font-weight:600px;
+}
+.centering{
+    text-align: center;
+}
 .input-group-addon.home{
     padding:0;
     margin-right: 1rem;
@@ -383,13 +396,13 @@ div.sideMenuCheck{
 /*-----------------------*/
 
 .view-animate-container {
-  /*position:relative;*/
+  position:relative;
   height:100%!important;
-  /*background:white;*/
+/*  background:white;*/
   height: 100%;
-  /*border:1px solid black;*/
+/*  border:1px solid black;*/
  
-  /*overflow:hidden;*/
+/*  overflow:hidden;*/
 }
 
 .view-animate {
@@ -397,10 +410,10 @@ div.sideMenuCheck{
 }
 
 .view-animate.ng-enter, .view-animate.ng-leave {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  -webkit-transition:all cubic-bezier(0, 0, 0.1, 0.1) 0.5s;
+  transition:all cubic-bezier(0, 0, 0.1, 0.1) 0.5s;
 
-  display:block;
+/*  display:block;*/
   width:100%;
   /*border-left:1px solid black;*/
 
@@ -413,11 +426,12 @@ div.sideMenuCheck{
 }
 
 .view-animate.ng-enter {
-  top:100%;
+  top:200%;
 }
 .view-animate.ng-enter.ng-enter-active {
   top:0;
 }
 .view-animate.ng-leave.ng-leave-active {
-  top:-100%;
+  top:-200%;
+/*    display: none;*/
 }
