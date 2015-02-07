@@ -15,11 +15,24 @@
 span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.glyphicon-heart{
 	width: 100%;
 	padding: 1rem;
+
+}
+
+.navOnPage{
+	background-color: grey;
+
+}
+
+.OnPage{
+	color:white;
 }
 
 /*----------       Basic CSS      ------------*/
 
-
+.errorMsg{
+	position: center;
+	color:#3c3c3c;
+}
 
 ul{
 	/*padding-top:15px;*/
