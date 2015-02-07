@@ -12,11 +12,10 @@ flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
   $scope.orderProp = 'leaving';
   $scope.orderProp = 'price';
 
-  // $scope.getFavourites = function($item){
-  //   console.log($item);
-  // };
+  $scope.getFavourites = function($item){
+    console.log($item);
+  };
 
 
-  // $scope.selectedFriends = [];
 
 });
