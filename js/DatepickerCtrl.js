@@ -1,3 +1,4 @@
+// Date Selection for the leaving date using angular bootstrap UI
 flightinfoApp.controller('DatepickerCtrl', function ($scope, InfoService) {
   $scope.today = function() {
     $scope.dt = new Date();
@@ -10,15 +11,9 @@ flightinfoApp.controller('DatepickerCtrl', function ($scope, InfoService) {
     $scope.dt=InfoService.getKeepLeavingInfo();
   }
 
-
   $scope.clear = function () {
     $scope.dt = null;
   };
-
-  // Disable weekend selection
-  // $scope.disabled = function(date, mode) {
-  //   return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-  // };
 
   $scope.change = function() {
     var item = (String($scope.dt)).split(" ");
@@ -44,6 +39,7 @@ flightinfoApp.controller('DatepickerCtrl', function ($scope, InfoService) {
     startingDay: 1
   };
 
+  // Date format that we want for passing information 
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
   $scope.format = $scope.formats[1];
 

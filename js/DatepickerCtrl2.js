@@ -1,8 +1,8 @@
+// Date Selection for the Returning date using angular bootstrap UI
 flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
   $scope.today = function() {
     $scope.dt = new Date();
   };
-  // $scope.today();
 
   if(!InfoService.getReturningInfo()){
     $scope.today();
@@ -13,11 +13,6 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
 
   $scope.clear = function () {
     $scope.dt = null;
-  };
-
-  // Disable weekend selection
-  $scope.disabled = function(date, mode) {
-    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
   };
 
   $scope.change = function() {
@@ -42,7 +37,7 @@ flightinfoApp.controller('DatepickerCtrl2', function ($scope, InfoService) {
     formatYear: 'yy',
     startingDay: 1
   };
-
+  // Date format that we want for passing information
   $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
   $scope.format = $scope.formats[1];
 });
