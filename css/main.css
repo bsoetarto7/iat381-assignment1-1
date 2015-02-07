@@ -1,6 +1,7 @@
 .bottomNav{
 	padding: 0;
 	border-right: solid;
+    border-color: white;
 	border-width:2px; 
 }
 .bottomNav2{
@@ -9,11 +10,11 @@
 .btn.btn-default.bottomNavButton{
 	width: 100%;
 	height: 100%;
-	font-size: 5rem;
+	font-size: 3rem;
 }
 span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.glyphicon-heart{
 	width: 100%;
-	padding: 1.5rem;
+	padding: 1rem;
 }
 
 /*----------       Basic CSS      ------------*/
@@ -161,6 +162,16 @@ background-color: blue;
 }
 
 /*------------------------------fligh detial------------------------------*/
+.summarybtn{
+	padding:2px;
+	font-size: 18px;
+	border: 2x solid gray;
+	background-color: #7c7c7c;
+	opacity: 0.4;
+	width: 20%;
+	text-decoration: none;
+
+}
 .containertype-3{
     padding-bottom: 120px;
 }
