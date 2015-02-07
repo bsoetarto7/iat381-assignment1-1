@@ -103,6 +103,8 @@ var numberOfAdutls='';
 
 var numberOfKids='';
 
+var favouritesList=[];
+
   // From Variables
   var addFromInfo = function(newObj) {
     FromInfoitems=newObj;
@@ -219,6 +221,32 @@ var messageDisplay = function(){
   return errorMessage;
 }
 
+var addFavourites = function(newObj){
+  var noFound = true;
+  for(var i = 0; i< favouritesList.length; i++){
+    if(newObj === favouritesList[i]){
+      noFound = false;
+    }
+  }
+
+  if(noFound) favouritesList.push(newObj);
+}
+
+var removeFavourites = function(newObj){
+  for(var i = 0; i< favouritesList.length; i++){
+    if(newObj === favouritesList[i]){
+      favouritesList.splice(i, 1);
+      break;
+    }
+  }
+}
+
+
+
+var getFavourites = function(){
+  return favouritesList;
+}
+
 
 
 return {
@@ -249,7 +277,11 @@ return {
   getnumberOfKids: getnumberOfKids,
 
   getFilter: getFilter,
-  messageDisplay: messageDisplay
+  messageDisplay: messageDisplay,
+
+  addFavourites: addFavourites,
+  removeFavourites: removeFavourites,
+  getFavourites: getFavourites
 
 };
 

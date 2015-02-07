@@ -24,14 +24,25 @@
                 <div class="form-group" ng-controller="TypeaheadCtrl">
 
                 <!-- <input type="text" class="form-control" id="usr" placeholder="Destination"> -->
-                  <input placeholder="{{$from}}" type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control" typeahead-on-select="onSelect($item)">
+                  <input id="infoInputs1" placeholder="{{$from}}" type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control" typeahead-on-select="onSelect($item)">
 
                 </div>
             </div>
             <div class="panel-body">
                 <div class="form-group" ng-controller="TypeaheadCtrl">
-                  <input placeholder="{{$destination}}" type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control" typeahead-on-select="onSelect2($item)">
+                  <input id="infoInputs2" placeholder="{{$destination}}" type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control" typeahead-on-select="onSelect2($item)">
                 </div>
+            </div>
+            <div>
+              <script>
+                function removePlace(){
+                  document.getElementById("infoInputs1").placeholder="From";
+                  document.getElementById("infoInputs2").placeholder="Destination";
+                };
+                
+              </script>
+            
+
             </div>
         </div>
                 
@@ -156,5 +167,29 @@
     </div>
 
 </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom" ng-controller="NavCtrl">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-4 bottomNav">
+            <a type="button" class="btn btn-default bottomNavButton navOnPage" href="#page2">
+              <span class="glyphicon glyphicon-pencil OnPage" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div class="col-xs-4 bottomNav">
+            <a type="button" class="btn btn-default bottomNavButton" href="#page3">
+              <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div class="col-xs-4 bottomNav2">
+            <a type="button" class="btn btn-default bottomNavButton" href="#page4">
+              <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
 

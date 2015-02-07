@@ -13,9 +13,6 @@ flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
   $scope.orderProp = 'price';
 
   $scope.getFavourites = function($item){
-    console.log($item);
+    InfoService.addFavourites($item);
   };
-
-
-
 });
