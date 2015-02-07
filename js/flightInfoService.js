@@ -1,20 +1,107 @@
 flightinfoApp.service('InfoService', function() {
-  var FromInfoitems ='';
-  var DestinationInfoItems='';
+  var flightInfo = [
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
 
-  var LeavingDate='';
-  var ReturningDate='';
+  airPortL : 'YVR ',
+  airPortR : 'HKG ',
 
-  var KeepLeavingDate='';
-  var KeepReturningDate='';
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Vanvouer',
+  'arriveLocationL' : 'Hong Kong',
+  'arrivelTimeL': 1745,
 
-  var flightClassType='';
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'Hong Kong',
+  'arriveLocationR' : 'Vanvouer',
+  'arrivelTimeR': 1025
 
-  var numberOfStops='';
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
 
-  var numberOfAdutls='';
+airPortL : 'YVR ',
+airPortR : 'HKG ',
 
-  var numberOfKids='';
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Vanvouer',
+'arriveLocationL' : 'Hong Kong',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'Hong Kong',
+'arriveLocationR' : 'Vanvouer',
+'arrivelTimeR': 1025
+},
+{'Flight': 'WS3255',
+'leaving': 1010,
+'returning': 1030,
+'price': 2100,
+'Air_line': 'WestJet',
+'image': 'WestJet.png',
+
+airPortL : 'YVR ',
+airPortR : 'HKG ',
+
+'leavingFlightNo': 'Ws3255',
+'departLocationL' : 'Vanvouer',
+'arriveLocationL' : 'Hong Kong',
+'arrivelTimeL': 1745,
+
+'returningFlightNo' : 'Ws3479',
+'departLocationR' : 'Hong Kong',
+'arriveLocationR' : 'Vanvouer',
+'arrivelTimeR': 1025
+},
+{'Flight': 'CX838',
+'leaving': 1940,
+'returning': 1030,
+'snippet': 'The Next, Next Generation tablet.',
+'price': 2800,
+'Air_line': 'Cathay Pacific Airways',
+'image': 'CathayPacific.png',
+
+
+airPortL : 'YVR ',
+airPortR : 'HKG ',
+
+'leavingFlightNo': 'CX839',
+'departLocationL' : 'Vanvouer',
+'arriveLocationL' : 'Hong Kong',
+'arrivelTimeL': 2145,
+
+'returningFlightNo' : 'CX888',
+'departLocationR' : 'Hong Kong',
+'arriveLocationR' : 'Vanvouer',
+'arrivelTimeR': 1025
+}
+];
+
+
+var FromInfoitems ='';
+var DestinationInfoItems='';
+
+var LeavingDate='';
+var ReturningDate='';
+
+var KeepLeavingDate='';
+var KeepReturningDate='';
+
+var flightClassType='';
+
+var numberOfStops='';
+
+var numberOfAdutls='';
+
+var numberOfKids='';
 
   // From Variables
   var addFromInfo = function(newObj) {
@@ -96,36 +183,72 @@ flightinfoApp.service('InfoService', function() {
     return numberOfKids;
   }
 
+  var errorMessage = '';
+  var checkInput = function(){
+
+    errorMessage = '';
+    if(FromInfoitems === '' && DestinationInfoItems ===''){
+      errorMessage = 'Please enter the departing and destination location for suggestions.';
+    }else if(FromInfoitems == ''){
+      errorMessage = 'Please enter the departing location for suggestions.';
+    }else if(DestinationInfoItems ==''){
+      errorMessage = 'Please enter the destination location for suggestions.';
+    }
+  }
 
 
+  var getFilter = function(){
+    checkInput();
 
-  return {
-    addFromInfo: addFromInfo,
-    getFromInfo: getFromInfo,
+    if (errorMessage ==''){
+      var arr =[];
+      for (var i = 0; i < flightInfo.length; i++) {
+        if (flightInfo[i].airPortL == String(FromInfoitems).split("-")[0]
+          && flightInfo[i].airPortR == String(DestinationInfoItems).split("-")[0]) {
+                arr.push(flightInfo[i]); // equivalent to specifi List<whatever>#add
+            }
+          }
+      // console.log(arr);
 
-    addDestinationInfo: addDestinationInfo,
-    getDestinationInfo: getDestinationInfo,
+      if(arr.length == 0) errorMessage ='Sorry no match found, please try other location.';
+      else return arr;
+  }
+}
 
-    addLeavingInfo: addLeavingInfo,
-    getLeavingInfo: getLeavingInfo,
-    getKeepLeavingInfo: getKeepLeavingInfo,
+var messageDisplay = function(){
+  return errorMessage;
+}
 
-    addReturningInfo: addReturningInfo,
-    getReturningInfo: getReturningInfo,
-    getKeepReturningInfo: getKeepReturningInfo,
+return {
+  addFromInfo: addFromInfo,
+  getFromInfo: getFromInfo,
 
-    addflightClassType: addflightClassType,
-    getflightClassType: getflightClassType,
+  addDestinationInfo: addDestinationInfo,
+  getDestinationInfo: getDestinationInfo,
 
-    addnumberOfStops: addnumberOfStops,
-    getnumberOfStops: getnumberOfStops,
+  addLeavingInfo: addLeavingInfo,
+  getLeavingInfo: getLeavingInfo,
+  getKeepLeavingInfo: getKeepLeavingInfo,
 
-    addnumberOfAdutls: addnumberOfAdutls,
-    getnumberOfAdutls: getnumberOfAdutls,
+  addReturningInfo: addReturningInfo,
+  getReturningInfo: getReturningInfo,
+  getKeepReturningInfo: getKeepReturningInfo,
 
-    addnumberOfKids: addnumberOfKids,
-    getnumberOfKids: getnumberOfKids
+  addflightClassType: addflightClassType,
+  getflightClassType: getflightClassType,
 
-  };
+  addnumberOfStops: addnumberOfStops,
+  getnumberOfStops: getnumberOfStops,
+
+  addnumberOfAdutls: addnumberOfAdutls,
+  getnumberOfAdutls: getnumberOfAdutls,
+
+  addnumberOfKids: addnumberOfKids,
+  getnumberOfKids: getnumberOfKids,
+
+  getFilter: getFilter,
+  messageDisplay: messageDisplay
+
+};
 
 });
