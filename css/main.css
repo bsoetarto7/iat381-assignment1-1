@@ -28,7 +28,10 @@ span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.gl
 }
 
 /*----------       Basic CSS      ------------*/
+.lastRowHome{
+	margin-bottom: 5rem;
 
+}
 .errorMsg{
 	position: center;
 	color:#3c3c3c;
