@@ -64,8 +64,7 @@ when swipe, setting page shown, support additional filters -->
           <div>{{message}}</div>
           <ul class="list-group box-of-flight animate-container">
             <li class="list-group-item box-of-flight animate-repeat" 
-            ng-repeat="info in flightInfo | orderBy:orderProp | filter: search"
-            ng-controller="ItemController">
+            ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
 
             
               
@@ -147,7 +146,7 @@ when swipe, setting page shown, support additional filters -->
                         <button class="btn btn-primary" ng-click="ok()">OK</button>
                       </div>
                       </script>
-                    <a href="" ng-click="open(); toggleSelection()">Add To Favourites</a>
+                    <a href="" ng-click="open(); getFavourites(flightInfo[$index])">Add To Favourites</a>
                   </div>
                     
                   </div> 
