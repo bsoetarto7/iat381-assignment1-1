@@ -388,19 +388,19 @@ div.sideMenuCheck{
 
 .animate-repeat.ng-leave-stagger {
     -webkit-transition-delay: 0s;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
 
    -webkit-transition-duration: 0s;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 
 .animate-repeat.ng-enter-stagger {
      -webkit-transition-delay: 0s;
-    transition-delay: 1s;
+    transition-delay: 0.5s;
 
    -webkit-transition-duration: 0s;
-    transition-duration: 0s;
+    transition-duration: 0.5s;
 }
 
 
@@ -445,4 +445,17 @@ div.sideMenuCheck{
 .view-animate.ng-leave.ng-leave-active {
   top:-200%;
 /*    display: none;*/
+}
+
+
+
+
+.popWindow{
+	height: 110%;
+	padding-top: 50%;
+	background-color: rgba(234,234,234,0.8);
+}
+
+.popWindow .popWindowText{
+	font-size:1.6rem; 
 }

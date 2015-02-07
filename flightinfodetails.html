@@ -61,6 +61,7 @@ when swipe, setting page shown, support additional filters -->
     <div class="container">
         <div class="containertype-3">
          <div class="row">
+          <div>{{message}}</div>
           <ul class="list-group box-of-flight animate-container">
             <li class="list-group-item box-of-flight animate-repeat" 
             ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
@@ -130,6 +131,32 @@ when swipe, setting page shown, support additional filters -->
                   Arrive Time: {{info.arrivelTimeR}}
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-xs-6"> 
+                  <a href="">Book Now</a>
+                </div>
+                <div class="col-xs-6">
+                  <div ng-controller="ModalCtrl">
+                      <script type="text/ng-template" id="modal.html">
+                      <div class="modal-body">
+                        <h3 class="popWindowText">Added To Favourites!</h3>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-primary" ng-click="ok()">OK</button>
+                      </div>
+                      </script>
+
+                    <a href="" ng-click="open()">Add To Favourites</a>
+                  </div>
+                    
+                  </div> 
+                  
+                </div>
+              </div>
+
+
+
             </details>
           </li>
         </ul>

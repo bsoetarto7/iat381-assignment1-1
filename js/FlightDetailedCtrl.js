@@ -1,76 +1,93 @@
 flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
-  $scope.flightInfo = [
-{'Flight': 'AC997',
-     'leaving': 0910,
-     'returning:': 1030,
-     'price': 2000,
-     'Air_line': 'Air Canada',
-     'image': 'AirCanada.png',
+  $scope.flightInfo = InfoService.getFilter();
+  $scope.message = InfoService.messageDisplay();
 
-     'leavingFlightNo': 'AC999',
-     'departLocationL' : 'Vanvouer',
-     'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 1745,
+//   $scope.flightInfo = [
+// {    'Flight': 'AC997',
+//      'leaving': 0910,
+//      'returning:': 1030,
+//      'price': 2000,
+//      'Air_line': 'Air Canada',
+//      'image': 'AirCanada.png',
 
-     'returningFlightNo' : 'AC979',
-     'departLocationR' : 'Hong Kong',
-     'arriveLocationR' : 'Vanvouer',
-     'arrivelTimeR': 1025
+//       airPortL : 'YVR ',
+//       airPortR : 'HKG ',
 
-   },
-    {'Flight': 'DL4849',
-     'leaving': 1010,
-     'returning': 1030,
-     'price': 1900,
-     'Air_line': 'Delta Air Lines',
-     'image': 'Delta.png',
+//      'leavingFlightNo': 'AC999',
+//      'departLocationL' : 'Vanvouer',
+//      'arriveLocationL' : 'Hong Kong',
+//      'arrivelTimeL': 1745,
 
-     'leavingFlightNo': 'DL4849',
-     'departLocationL' : 'Vanvouer',
-     'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 1245,
+//      'returningFlightNo' : 'AC979',
+//      'departLocationR' : 'Hong Kong',
+//      'arriveLocationR' : 'Vanvouer',
+//      'arrivelTimeR': 1025
 
-     'returningFlightNo' : 'DL9379',
-     'departLocationR' : 'Hong Kong',
-     'arriveLocationR' : 'Vanvouer',
-     'arrivelTimeR': 1025
-   },
-   {'Flight': 'WS3255',
-     'leaving': 1010,
-     'returning': 1030,
-     'price': 2100,
-     'Air_line': 'WestJet',
-     'image': 'WestJet.png',
+//    },
+//     {'Flight': 'DL4849',
+//      'leaving': 1010,
+//      'returning': 1030,
+//      'price': 1900,
+//      'Air_line': 'Delta Air Lines',
+//      'image': 'Delta.png',
 
-     'leavingFlightNo': 'Ws3255',
-     'departLocationL' : 'Vanvouer',
-     'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 1745,
+//       airPortL : 'YVR ',
+//       airPortR : 'HKG ',
 
-     'returningFlightNo' : 'Ws3479',
-     'departLocationR' : 'Hong Kong',
-     'arriveLocationR' : 'Vanvouer',
-     'arrivelTimeR': 1025
-   },
-    {'Flight': 'CX838',
-     'leaving': 1940,
-     'returning': 1030,
-     'snippet': 'The Next, Next Generation tablet.',
-     'price': 2800,
-     'Air_line': 'Cathay Pacific Airways',
-     'image': 'CathayPacific.png',
+//      'leavingFlightNo': 'DL4849',
+//      'departLocationL' : 'Vanvouer',
+//      'arriveLocationL' : 'Hong Kong',
+//      'arrivelTimeL': 1245,
 
-     'leavingFlightNo': 'CX839',
-     'departLocationL' : 'Vanvouer',
-     'arriveLocationL' : 'Hong Kong',
-     'arrivelTimeL': 2145,
+//      'returningFlightNo' : 'DL9379',
+//      'departLocationR' : 'Hong Kong',
+//      'arriveLocationR' : 'Vanvouer',
+//      'arrivelTimeR': 1025
+//    },
+//    {'Flight': 'WS3255',
+//      'leaving': 1010,
+//      'returning': 1030,
+//      'price': 2100,
+//      'Air_line': 'WestJet',
+//      'image': 'WestJet.png',
 
-     'returningFlightNo' : 'CX888',
-     'departLocationR' : 'Hong Kong',
-     'arriveLocationR' : 'Vanvouer',
-     'arrivelTimeR': 1025
-   }
-  ];
+//        airPortL : 'YVR ',
+//       airPortR : 'HKG ',
+
+//      'leavingFlightNo': 'Ws3255',
+//      'departLocationL' : 'Vanvouer',
+//      'arriveLocationL' : 'Hong Kong',
+//      'arrivelTimeL': 1745,
+
+//      'returningFlightNo' : 'Ws3479',
+//      'departLocationR' : 'Hong Kong',
+//      'arriveLocationR' : 'Vanvouer',
+//      'arrivelTimeR': 1025
+//    },
+//     {'Flight': 'CX838',
+//      'leaving': 1940,
+//      'returning': 1030,
+//      'snippet': 'The Next, Next Generation tablet.',
+//      'price': 2800,
+//      'Air_line': 'Cathay Pacific Airways',
+//      'image': 'CathayPacific.png',
+
+
+//       airPortL : 'YVR ',
+//       airPortR : 'HKG ',
+
+//      'leavingFlightNo': 'CX839',
+//      'departLocationL' : 'Vanvouer',
+//      'arriveLocationL' : 'Hong Kong',
+//      'arrivelTimeL': 2145,
+
+//      'returningFlightNo' : 'CX888',
+//      'departLocationR' : 'Hong Kong',
+//      'arriveLocationR' : 'Vanvouer',
+//      'arrivelTimeR': 1025
+//    }
+//   ];
+
 
   $scope.inputDepartLocation = String(InfoService.getFromInfo()).split("-")[0];
   $scope.inputArriveLocation = String(InfoService.getDestinationInfo()).split("-")[0];
