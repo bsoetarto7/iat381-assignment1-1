@@ -32,6 +32,14 @@ span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.gl
 .errorMsg{
 	position: center;
 	color:#3c3c3c;
+    margin-top: 40%;
+    text-align: center;
+    text-shadow: 2px 2px 2px #b0b0b0;
+    color: white;
+    background-color: #d3d3d3;
+    padding: 3rem;
+    border-radius: 5px;
+    
 }
 
 ul{
@@ -108,14 +116,38 @@ h3{
 }
 
 /*-----------------------------button-----------------------------*/ 
+.button-type4
+{
+    color:red;
+    margin:0;
+   
+}
+
+.closeButtons{
+    text-align: right;
+}
+    
+
+.btn.btn-default.btn-lg.type4{
+
+	font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0);    
+}
+
+
+
 
 .btn.btn-default.btn-lg{
 
 	
-	font-size: 18px;
+	font-size: 13px;
 	border: 2x solid gray;
 	background-color: #7c7c7c;
 	opacity: 0.4;
+    margin-top: 10px;
 }
 
 .btn.btn-default{
@@ -164,7 +196,7 @@ background-color: blue;
 
 	text-decoration: none;
 	color: white;
-	margin-bottom: 10px;
+	
 
 }
 	

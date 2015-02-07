@@ -11,13 +11,13 @@ flightinfoApp.service('InfoService', function() {
   airPortR : 'HKG ',
 
   'leavingFlightNo': 'AC999',
-  'departLocationL' : 'Vanvouer',
+  'departLocationL' : 'Vancouver',
   'arriveLocationL' : 'Hong Kong',
   'arrivelTimeL': 1745,
 
   'returningFlightNo' : 'AC979',
   'departLocationR' : 'Hong Kong',
-  'arriveLocationR' : 'Vanvouer',
+  'arriveLocationR' : 'Vancouver',
   'arrivelTimeR': 1025
 
 },
@@ -32,13 +32,13 @@ airPortL : 'YVR ',
 airPortR : 'HKG ',
 
 'leavingFlightNo': 'DL4849',
-'departLocationL' : 'Vanvouer',
+'departLocationL' : 'Vancouver',
 'arriveLocationL' : 'Hong Kong',
 'arrivelTimeL': 1245,
 
 'returningFlightNo' : 'DL9379',
 'departLocationR' : 'Hong Kong',
-'arriveLocationR' : 'Vanvouer',
+'arriveLocationR' : 'Vancouver',
 'arrivelTimeR': 1025
 },
 {'Flight': 'WS3255',
@@ -52,13 +52,13 @@ airPortL : 'YVR ',
 airPortR : 'HKG ',
 
 'leavingFlightNo': 'Ws3255',
-'departLocationL' : 'Vanvouer',
+'departLocationL' : 'Vancouver',
 'arriveLocationL' : 'Hong Kong',
 'arrivelTimeL': 1745,
 
 'returningFlightNo' : 'Ws3479',
 'departLocationR' : 'Hong Kong',
-'arriveLocationR' : 'Vanvouer',
+'arriveLocationR' : 'Vancouver',
 'arrivelTimeR': 1025
 },
 {'Flight': 'CX838',
@@ -74,15 +74,448 @@ airPortL : 'YVR ',
 airPortR : 'HKG ',
 
 'leavingFlightNo': 'CX839',
-'departLocationL' : 'Vanvouer',
+'departLocationL' : 'Vancouver',
 'arriveLocationL' : 'Hong Kong',
 'arrivelTimeL': 2145,
 
 'returningFlightNo' : 'CX888',
 'departLocationR' : 'Hong Kong',
-'arriveLocationR' : 'Vanvouer',
+'arriveLocationR' : 'Vancouver',
 'arrivelTimeR': 1025
-}
+},
+      
+      
+{ 'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'YVR ',
+  airPortR : 'NYC ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Vancouver',
+  'arriveLocationL' : 'New York',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'New York',
+  'arriveLocationR' : 'Vancouver',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'YVR ',
+airPortR : 'NYC ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'New York',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'New York',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+{'Flight': 'WS3255',
+'leaving': 1010,
+'returning': 1030,
+'price': 2100,
+'Air_line': 'WestJet',
+'image': 'WestJet.png',
+
+airPortL : 'YVR ',
+airPortR : 'NYC ',
+
+'leavingFlightNo': 'Ws3255',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'New York',
+'arrivelTimeL': 1745,
+
+'returningFlightNo' : 'Ws3479',
+'departLocationR' : 'New York',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+{'Flight': 'CX838',
+'leaving': 1940,
+'returning': 1030,
+'snippet': 'The Next, Next Generation tablet.',
+'price': 2800,
+'Air_line': 'Cathay Pacific Airways',
+'image': 'CathayPacific.png',
+
+
+airPortL : 'YVR ',
+airPortR : 'NYC ',
+
+'leavingFlightNo': 'CX839',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'New York',
+'arrivelTimeL': 2145,
+
+'returningFlightNo' : 'CX888',
+'departLocationR' : 'New York',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+      
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'YVR ',
+  airPortR : 'YUL ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Vancouver',
+  'arriveLocationL' : 'Montreal',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'Montreal',
+  'arriveLocationR' : 'Vancouver',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'YVR ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+{'Flight': 'WS3255',
+'leaving': 1010,
+'returning': 1030,
+'price': 2100,
+'Air_line': 'WestJet',
+'image': 'WestJet.png',
+
+airPortL : 'YVR ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'Ws3255',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 1745,
+
+'returningFlightNo' : 'Ws3479',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+{'Flight': 'CX838',
+'leaving': 1940,
+'returning': 1030,
+'snippet': 'The Next, Next Generation tablet.',
+'price': 2800,
+'Air_line': 'Cathay Pacific Airways',
+'image': 'CathayPacific.png',
+
+
+airPortL : 'YVR ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'CX839',
+'departLocationL' : 'Vancouver',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 2145,
+
+'returningFlightNo' : 'CX888',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Vancouver',
+'arrivelTimeR': 1025
+},
+      
+      
+      
+      
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'YEG ',
+  airPortR : 'YUL ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Edmonton',
+  'arriveLocationL' : 'Montreal',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'Montreal',
+  'arriveLocationR' : 'Edmonton',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'YEG ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Edmonton',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Edmonton',
+'arrivelTimeR': 1025
+},
+{'Flight': 'WS3255',
+'leaving': 1010,
+'returning': 1030,
+'price': 2100,
+'Air_line': 'WestJet',
+'image': 'WestJet.png',
+
+airPortL : 'YEG ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'Ws3255',
+'departLocationL' : 'Edmonton',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 1745,
+
+'returningFlightNo' : 'Ws3479',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Edmonton',
+'arrivelTimeR': 1025
+},
+{'Flight': 'CX838',
+'leaving': 1940,
+'returning': 1030,
+'snippet': 'The Next, Next Generation tablet.',
+'price': 2800,
+'Air_line': 'Cathay Pacific Airways',
+'image': 'CathayPacific.png',
+
+
+airPortL : 'YEG ',
+airPortR : 'YUL ',
+
+'leavingFlightNo': 'CX839',
+'departLocationL' : 'Edmonton',
+'arriveLocationL' : 'Montreal',
+'arrivelTimeL': 2145,
+
+'returningFlightNo' : 'CX888',
+'departLocationR' : 'Montreal',
+'arriveLocationR' : 'Edmonton',
+'arrivelTimeR': 1025
+},
+      
+
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'YEG ',
+  airPortR : 'HKG ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Edmonton',
+  'arriveLocationL' : 'Hong Kong',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'Hong Kong',
+  'arriveLocationR' : 'Edmonton',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'YEG ',
+airPortR : 'HKG ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Edmonton',
+'arriveLocationL' : 'Hong Kong',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'Hong Kong',
+'arriveLocationR' : 'Edmonton',
+'arrivelTimeR': 1025
+},
+      
+      
+      
+      
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'OAK ',
+  airPortR : 'SAN ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Oakland',
+  'arriveLocationL' : 'San Diego',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'San Diego',
+  'arriveLocationR' : 'Oakland',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'OAK ',
+airPortR : 'SAN ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Oakland',
+'arriveLocationL' : 'San Diego',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'San Diego',
+'arriveLocationR' : 'Oakland',
+'arrivelTimeR': 1025
+},
+      
+      
+      
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'YWG ',
+  airPortR : 'SAN ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Winnipeg',
+  'arriveLocationL' : 'San Diego',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'San Diego',
+  'arriveLocationR' : 'Winnipeg',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'YWG ',
+airPortR : 'SAN ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Winnipeg',
+'arriveLocationL' : 'San Diego',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'San Diego',
+'arriveLocationR' : 'Winnipeg',
+'arrivelTimeR': 1025
+},
+      
+      
+  {    'Flight': 'AC997',
+  'leaving': 0910,
+  'returning:': 1030,
+  'price': 2000,
+  'Air_line': 'Air Canada',
+  'image': 'AirCanada.png',
+
+  airPortL : 'HKG ',
+  airPortR : 'SAN ',
+
+  'leavingFlightNo': 'AC999',
+  'departLocationL' : 'Hong Kong',
+  'arriveLocationL' : 'San Diego',
+  'arrivelTimeL': 1745,
+
+  'returningFlightNo' : 'AC979',
+  'departLocationR' : 'San Diego',
+  'arriveLocationR' : 'Hong Kong',
+  'arrivelTimeR': 1025
+
+},
+{'Flight': 'DL4849',
+'leaving': 1010,
+'returning': 1030,
+'price': 1900,
+'Air_line': 'Delta Air Lines',
+'image': 'Delta.png',
+
+airPortL : 'HKG ',
+airPortR : 'SAN ',
+
+'leavingFlightNo': 'DL4849',
+'departLocationL' : 'Hong Kong',
+'arriveLocationL' : 'San Diego',
+'arrivelTimeL': 1245,
+
+'returningFlightNo' : 'DL9379',
+'departLocationR' : 'San Diego',
+'arriveLocationR' : 'Hong Kong',
+'arrivelTimeR': 1025
+},
+      
+      
 ];
 
 
