@@ -1,21 +1,5 @@
 
-<!-- the navigation bar, showing status of progress -->
-<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavCtrl">
-  <div class="col-xs-2">
-    <a href="#/home"><img class="small-logo" src="img/logo.png" width="40"></a>
-  </div>
-  <div class="col-xs-10 navigation">
-    <div class="list-styled">
-      <ul ng-controller="NavCtrl">
-        <li ng-repeat="nav in NavBar">
-          <a href="#{{nav.LinkName}}">{{nav.name}}</a>
-          <span>{{nav.Arrow}}</span>
-        </li>
 
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <!-- the body of current stage, support swipe fetures, 
 default page shows infos, allow to expand
@@ -25,34 +9,48 @@ when swipe, setting page shown, support additional filters -->
     <!-- banner of page, showing user depart, destinate locations -->
     <div ng-app="ngAnimate" class="container">
       <div class="row goingLocation">
-      <div class="col-xs-4">
-        <h1 class="title">{{inputDepartLocation}}</h1>
-      </div>
-      <div class="col-xs-4">
-        <h1 class="title"> ----</h1>
-      </div>
-      <div class="col-xs-4">
-        <h1 class="title">{{inputArriveLocation}}</h1>
-      </div>
-    </div>
+         <div class="col-xs-4">
+            <h1 class="title">{{inputDepartLocation}}</h1>
+          </div>
+
+        <div class="col-xs-4">
+            <h1 class="title"> ----</h1>
+        </div>
+
+        <div class="col-xs-4">
+            <h1 class="title">{{inputArriveLocation}}</h1>
+        </div>
+     </div>
 
       <div class='row filteringItem'>
         <div class="col-xs-9">
-          Search: 
-          <input type="text" ng-model="search" class="search-query" style="width: 80px">
-        </div>
+             
+              <input type="text" ng-model="search" class="search-query" style="width: 80px" placeholder= "search" >
+         </div>
+       <!-- ======= Flight bacis filter ====== -->
         <div class="col-xs-3">
-          <select ng-model="orderProp" class='selectBar'>
-             <li class="list-group-item"> 
-               <option value="Air_line">Air line</option>
+   <!--      <div class="in-line-style">
+        <button type="button"  class="btn btn-default btn-lg" ng-model="orderProp">
+        <div class=""  value="Airling">2</div></button> -->
+          <select ng-model="orderProp" size="3">
+            
+
+             <li> 
+                <option value="Air_line">
+                1
+                </option>
              </li>
-             <li class="list-group-item"> 
+
+             <li > 
                <option value="leaving">Time</option>
              </li>
-             <li class="list-group-item"> 
+
+             <li > 
                <option value="price">Price</option>
+            
              </li>
           </select>
+          <div>
 
         </div>
       </div>
@@ -61,27 +59,30 @@ when swipe, setting page shown, support additional filters -->
 
     <!-- showing all found flight info -->
     <div class="container">
+        <div class="containertype-3">
          <div class="row">
           <ul class="list-group box-of-flight animate-container">
             <li class="list-group-item box-of-flight animate-repeat" 
             ng-repeat="info in flightInfo | orderBy:orderProp | filter: search">
 
-            <details >
-              <summary>
-                <div class="row">
-                  <div class="col-xs-5">
-                    <img class="flight-logo" ng-src="img/{{info.image}}">
-                  </div>
+            
+              
+                 <div class="row">
+                    <div class="col-xs-5">
+                      <img class="flight-logo" ng-src="img/{{info.image}}">
+                    </div>
 
-                  <div class"col-xs-7">
-                    <div>Air line: {{info.Air_line}}</div>
-                    <div>Flight: {{info.Flight}}</div>
-                    <div>Leaving: {{info.leaving}}</div>
-                    <div>Price: {{info.price}}</div>
-                  </div>
-                </div>
-              </summary>
-
+                   <div class"col-xs-7">
+                      <div>Air line: {{info.Air_line}}</div>
+                      <div>Flight: {{info.Flight}}</div>
+                      <div>Leaving: {{info.leaving}}</div>
+                      <div>Price: {{info.price}}</div>
+                   </div>
+                 </div>
+ <!-- ======= open up the whole detail ====== -->
+            <details> 
+              <summary >Detail </summary>
+            
               <div class="row">  
                 <div class="col-xs-12">
                   <h4>Depart</h4>
@@ -89,6 +90,7 @@ when swipe, setting page shown, support additional filters -->
               </div>
 
               <div class="row">
+
                 <div class="col-xs-12"> 
                   Flight No : {{info.leavingFlightNo}}
                 </div>
@@ -96,19 +98,23 @@ when swipe, setting page shown, support additional filters -->
                 <div class="col-xs-12">
                   Depart Location : {{info.departLocationL}}
                 </div>
+
                 <div class="col-xs-12">
                   Arrival Location : {{info.arriveLocationL}}
                 </div>
+
                 <div class="col-xs-12">
                   Arrive Time: {{info.arrivelTimeL}}
                 </div>
+
               </div>
 
               <div class="row">
+
                 <div class="col-xs-12">
                   <h4>Return</h4>
                 </div>
-              </div>
+               </div>
 
               <div class="row">
                 <div class="col-xs-12"> 
@@ -129,7 +135,7 @@ when swipe, setting page shown, support additional filters -->
         </ul>
       </div>
     </div>
-  </div>
+  </div> <!--container-->
 </div>
 
 
