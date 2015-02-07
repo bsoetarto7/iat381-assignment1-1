@@ -1,6 +1,9 @@
 flightinfoApp.controller('FlightDetailedCtrl', function ($scope, InfoService) {
   $scope.flightInfo = InfoService.getFilter();
   $scope.message = InfoService.messageDisplay();
+    if(!InfoService.messageDisplay()){
+        $scope.myValue = true;
+    }
 
   $scope.inputDepartLocation = String(InfoService.getFromInfo()).split("-")[0];
   $scope.inputArriveLocation = String(InfoService.getDestinationInfo()).split("-")[0];

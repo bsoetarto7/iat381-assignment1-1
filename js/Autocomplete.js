@@ -11,7 +11,7 @@ flightinfoApp.controller('TypeaheadCtrl', function($scope, InfoService) {
 'MHT - Manchester-Boston Regional Airport', 'MHK - Manhattan Regional Airport',
 'MLB - Melbourne International Airport', 'MIA - Miami International Airport', 'YYZ - Toronto Pearson International Airport',
 'OAK - Oakland International Airport', 'PAH - Barkley Regional Airport', 'PDX - Portland International Airport'
-,'SEA - Seattle International Airport'];
+,'SEA - Seattle International Airport','NYC - New York International Airport'];
   $scope.$from='From';
   $scope.$destination='Destination';
 
