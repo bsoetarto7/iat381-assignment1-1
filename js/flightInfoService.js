@@ -1,4 +1,7 @@
+// This service handles all the information of adding and getting
+// This connects all the inputs from the flightinfo page to the result and favourites page
 flightinfoApp.service('InfoService', function() {
+  // Database of all the flights available in our system
   var flightInfo = [
   {    'Flight': 'AC997',
   'leaving': 0910,
@@ -518,7 +521,7 @@ airPortR : 'SAN ',
       
 ];
 
-
+// Variables for the functions of getting and adding
 var FromInfoitems ='';
 var DestinationInfoItems='';
 
@@ -538,7 +541,7 @@ var numberOfKids='';
 
 var favouritesList=[];
 
-  // From Variables
+  // Adding & getting From Variables
   var addFromInfo = function(newObj) {
     FromInfoitems=newObj;
   }
@@ -547,7 +550,7 @@ var favouritesList=[];
     return FromInfoitems;
   }
 
-  // Destination variables
+  // Adding & getting Destination variables
   var addDestinationInfo = function(newObj) {
     DestinationInfoItems=newObj;
   }
@@ -557,7 +560,7 @@ var favouritesList=[];
   }
 
 
-  // Leaving Variables
+  // Adding & getting Leaving Variables
   var addLeavingInfo = function(newObj,newObj2) {
     LeavingDate=newObj;
     KeepLeavingDate = newObj2;
@@ -571,7 +574,7 @@ var favouritesList=[];
   }
 
 
-  // Returning Variables
+  // Adding & getting Returning Variables
   var addReturningInfo = function(newObj,newObj2) {
     ReturningDate=newObj;
     KeepReturningDate=newObj2;
@@ -584,7 +587,7 @@ var favouritesList=[];
     return KeepReturningDate;
   }
 
-  // Flight class
+  // Adding & getting Flight class
   var addflightClassType = function(newObj) {
     flightClassType=newObj;
   }
@@ -592,7 +595,7 @@ var favouritesList=[];
     return flightClassType;
   }
 
-  // Number of stops
+  // Adding & getting Number of stops
   var addnumberOfStops = function(newObj) {
     numberOfStops=newObj;
   }
@@ -600,7 +603,7 @@ var favouritesList=[];
     return numberOfStops;
   }
 
-  // Number of Adults
+  // Adding & getting Number of Adults
   var addnumberOfAdutls = function(newObj){
     numberOfAdutls = newObj;
   }
@@ -609,7 +612,7 @@ var favouritesList=[];
     return numberOfAdutls;
   }
 
-  // Number of Kids
+  // Adding & getting Number of Kids
   var addnumberOfKids = function(newObj){
     numberOfKids = newObj;
   }
@@ -618,6 +621,7 @@ var favouritesList=[];
     return numberOfKids;
   }
 
+  // check whether to provide the error message and the appropriate one
   var errorMessage = '';
   var checkInput = function(){
 
@@ -631,7 +635,7 @@ var favouritesList=[];
     }
   }
 
-
+  // Filter the  destination and returning
   var getFilter = function(){
     checkInput();
 
@@ -640,20 +644,20 @@ var favouritesList=[];
       for (var i = 0; i < flightInfo.length; i++) {
         if (flightInfo[i].airPortL == String(FromInfoitems).split("-")[0]
           && flightInfo[i].airPortR == String(DestinationInfoItems).split("-")[0]) {
-                arr.push(flightInfo[i]); // equivalent to specifi List<whatever>#add
+                arr.push(flightInfo[i]);
             }
           }
-      // console.log(arr);
 
       if(arr.length == 0) errorMessage ='Sorry no match found, please try other location.';
       else return arr;
+    }
   }
-}
 
 var messageDisplay = function(){
   return errorMessage;
 }
 
+// Adding to favourites list
 var addFavourites = function(newObj){
   var noFound = true;
   for(var i = 0; i< favouritesList.length; i++){
@@ -665,6 +669,7 @@ var addFavourites = function(newObj){
   if(noFound) favouritesList.push(newObj);
 }
 
+// Removing from favourites list
 var removeFavourites = function(newObj){
   for(var i = 0; i< favouritesList.length; i++){
     if(newObj === favouritesList[i]){
@@ -675,7 +680,7 @@ var removeFavourites = function(newObj){
 }
 
 
-
+// Gettign the favourites list
 var getFavourites = function(){
   return favouritesList;
 }
