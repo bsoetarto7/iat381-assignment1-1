@@ -43,7 +43,6 @@ span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.gl
 }
 
 ul{
-	/*padding-top:15px;*/
 	list-style: none;
 }
 
@@ -51,16 +50,10 @@ ul{
 	display: inline;
 }
 
-button {
-
-
-}
-
 
 button:active {
 	font-size:18px;
 	border:2px solid red;
-
 }
 
 
@@ -76,10 +69,8 @@ div.homeBG{
 }
 
 body{
-	
 	font-family: 'Open Sans', sans-serif;
 	 background-color: #eaeaea;
-	
 }
 
 .bird{
@@ -103,6 +94,7 @@ h2{
 	color: white;
 	font-size: 1.5rem;
 }
+
 h2.small-title{
 	color: black;
 	font-size: 2rem;
@@ -129,7 +121,6 @@ h3{
     
 
 .btn.btn-default.btn-lg.type4{
-
 	font-size: 16px;
     margin-bottom: 10px;
     margin-top: 0;
@@ -138,13 +129,8 @@ h3{
 }
 
 
-
-
 .btn.btn-default.btn-lg{
-
-	
 	font-size: 13px;
-	border: 2x solid gray;
 	background-color: #7c7c7c;
 	opacity: 0.4;
     margin-top: 10px;
@@ -231,7 +217,6 @@ img.flight-logo{
 	border-radius: 100px;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
-	/*background: url(http://link-to-your/image.jpg) no-repeat;*/
 	box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
@@ -240,14 +225,12 @@ img.flight-logo{
 
 .box-of-flight{
 	background-color: rgba(255,255,255, .5);
-	
 }
 
 
 
 img.small-logo{
 	margin-top: 0.4rem;
-	/*margin-left: 2rem;*/
 }
 
 .selectBar{
@@ -272,10 +255,7 @@ img.small-logo{
     margin-right: 1rem;
     border:0;
     background-color: rgba(0,0,0, .3);
-    width:30px;
-
-    
-    
+    width:30px;   
 }
 
 p.home{
@@ -396,6 +376,8 @@ div.sideMenuCheck{
 	margin-left: 15px;
 }
 
+/*----------Animation-------------*/
+
 .animate-container {
     background: #ececec;
     list-style:none;
@@ -434,7 +416,6 @@ div.sideMenuCheck{
 .animate-repeat.ng-leave-stagger {
     -webkit-transition-delay: 0s;
     transition-delay: 0.5s;
-
    -webkit-transition-duration: 0s;
     transition-duration: 0.5s;
 }
@@ -443,13 +424,12 @@ div.sideMenuCheck{
 .animate-repeat.ng-enter-stagger {
      -webkit-transition-delay: 0s;
     transition-delay: 0.5s;
-
    -webkit-transition-duration: 0s;
     transition-duration: 0.5s;
 }
 
 
-/*-----------------------*/
+/*----------Animation-------------*/
 
 .view-animate-container {
   position:relative;

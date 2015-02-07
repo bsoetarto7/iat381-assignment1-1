@@ -1,6 +1,3 @@
-
-
-
 <!-- the body of current stage, support swipe fetures, 
 default page shows infos, allow to expand
 when swipe, setting page shown, support additional filters -->
@@ -14,7 +11,7 @@ when swipe, setting page shown, support additional filters -->
           </div>
 
         <div class="col-xs-4">
-            <h1 class="title"> ----</h1>
+            <h1 class="title"> >>>></h1>
         </div>
 
         <div class="col-xs-4">
@@ -25,13 +22,10 @@ when swipe, setting page shown, support additional filters -->
       <div class='row filteringItem'>
         <div class="col-xs-8">
              
-              <input type="text" ng-model="search" class="search-query" style="width: 150px" placeholder= "search" >
+              <input type="text" ng-model="search" class="search-query" style="width: 150px"                       placeholder= "search" >
          </div>
        <!-- ======= Flight bacis filter ====== -->
         <div class="col-xs-4">
-   <!--      <div class="in-line-style">
-        <button type="button"  class="btn btn-default btn-lg" ng-model="orderProp">
-        <div class=""  value="Airling">2</div></button> -->
           <select ng-model="orderProp" class="select-FI">
                 <option value="Air_line">
                  Airline
@@ -42,9 +36,6 @@ when swipe, setting page shown, support additional filters -->
                <option value="price">Price</option>
         
           </select>
-          <div>
-
-        </div>
       </div>
     </div>
     <!-- banner ends -->
@@ -70,6 +61,7 @@ when swipe, setting page shown, support additional filters -->
                       <div>Price: {{info.price}}</div>
                    </div>
                  </div>
+                
  <!-- ======= open up the whole detail ====== -->
             <details> 
               <summary >Detail </summary>
@@ -126,26 +118,24 @@ when swipe, setting page shown, support additional filters -->
                 <div class="col-xs-6">
                   <div ng-controller="ModalCtrl">
                       <script type="text/ng-template" id="modal.html">
-                      <div class="modal-body">
-                        <h3 class="popWindowText">Added To Favourites!</h3>
-                      </div>
-                      <div class="modal-footer">
-                        <button class="btn btn-primary" ng-click="ok()">OK</button>
-                      </div>
+                        <div class="modal-body">
+                          <h3 class="popWindowText">Added To Favourites!</h3>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" ng-click="ok()">OK</button>
+                        </div>
                       </script>
                        <button type="button" class="btn btn-default btn-lg">
-                    <div class="button-type1" href="" ng-click="open();
-                    getFavourites(result[$index])">Favourites</div>
-                           </button>
+                           <div class="button-type1" href="" ng-click="open();
+                           getFavourites(result[$index])">Favourites
+                           </div>
+                        </button>
                   </div>
                     
                   </div> 
                   
                 </div>
               </div>
-
-
-
             </details>
           </li>
         </ul>
@@ -154,7 +144,7 @@ when swipe, setting page shown, support additional filters -->
   </div> <!--container-->
 </div>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom" ng-controller="NavCtrl">
+    <nav class="navbar navbar-default navbar-fixed-bottom"><!--Navigation-->
       <div class="container">
         <div class="row">
           <div class="col-xs-4 bottomNav">
@@ -177,5 +167,3 @@ when swipe, setting page shown, support additional filters -->
         </div>
       </div>
     </nav>
-
-
