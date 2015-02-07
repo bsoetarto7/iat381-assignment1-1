@@ -17,6 +17,11 @@ flightinfoApp.config(['$routeProvider',
                 templateUrl:'flightinfodetails.html',
                 controller: 'FlightDetailedCtrl'
             }).
+            when('/page4',{
+                // each flight detailed display
+                templateUrl:'favourites.html',
+                controller: 'FavouriteCtrl'
+            }).
             otherwise({
                 redirectTo: '/page2'
             });
