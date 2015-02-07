@@ -1,14 +1,48 @@
-div.navigation{
-	padding-top: 1rem;
-	text-align: right;
+.bottomNav{
+	padding: 0;
+	border-right: solid;
+    border-color: white;
+	border-width:2px; 
+}
+.bottomNav2{
+	padding: 0;
+}
+.btn.btn-default.bottomNavButton{
+	width: 100%;
+	height: 100%;
+	font-size: 3rem;
+}
+span.glyphicon.glyphicon-pencil,span.glyphicon.glyphicon-plane,span.glyphicon.glyphicon-heart{
+	width: 100%;
+	padding: 1rem;
+
 }
 
+.navOnPage{
+	background-color: grey;
+
+}
+
+.OnPage{
+	color:white;
+}
 
 /*----------       Basic CSS      ------------*/
 
+.errorMsg{
+	position: center;
+	color:#3c3c3c;
+    margin-top: 40%;
+    text-align: center;
+    text-shadow: 2px 2px 2px #b0b0b0;
+    color: white;
+    background-color: #d3d3d3;
+    padding: 3rem;
+    border-radius: 5px;
+    
+}
 
 ul{
-	/*padding-top:15px;*/
 	list-style: none;
 }
 
@@ -16,16 +50,10 @@ ul{
 	display: inline;
 }
 
-button {
-
-
-}
-
 
 button:active {
 	font-size:18px;
 	border:2px solid red;
-
 }
 
 
@@ -41,20 +69,19 @@ div.homeBG{
 }
 
 body{
-	
 	font-family: 'Open Sans', sans-serif;
 	 background-color: #eaeaea;
-	
 }
 
 .bird{
 	padding-top:20%;
 }
 
-.title{
-	font-weight:900;
+h4.title{
+	font-weight:400;
 	font-size:38px;
 	padding-bottom: 20px;
+    color:black;
 }
 
 header{
@@ -67,6 +94,7 @@ h2{
 	color: white;
 	font-size: 1.5rem;
 }
+
 h2.small-title{
 	color: black;
 	font-size: 2rem;
@@ -80,14 +108,32 @@ h3{
 }
 
 /*-----------------------------button-----------------------------*/ 
+.button-type4
+{
+    color:red;
+    margin:0;
+   
+}
+
+.closeButtons{
+    text-align: right;
+}
+    
+
+.btn.btn-default.btn-lg.type4{
+	font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0);    
+}
+
 
 .btn.btn-default.btn-lg{
-
-	
-	font-size: 18px;
-	border: 2x solid gray;
+	font-size: 13px;
 	background-color: #7c7c7c;
 	opacity: 0.4;
+    margin-top: 10px;
 }
 
 .btn.btn-default{
@@ -110,18 +156,6 @@ h3{
 background-color: blue;
 }
 
-.glyphicon-plane{
-	/*font-size: 25px;*/
-	color: white;
-	font-size: 50px;
-}
-
-.glyphicon-home{
-	/*font-size: 25px;*/
-	color: white;
-	font-size: 50px;
-}
-
 .homebuttons{
 	font-size: 18px;
 	border: 2x solid gray;
@@ -134,7 +168,7 @@ background-color: blue;
 	margin-top: 2rem;
 }
 .container.flightinfo-type1{
-	margin-top: 80px;
+	padding-top: 20px;
 	
 
 }
@@ -145,11 +179,8 @@ background-color: blue;
 }
 
 .button-type1{
-
 	text-decoration: none;
 	color: white;
-	margin-bottom: 10px;
-
 }
 	
 
@@ -159,6 +190,21 @@ background-color: blue;
 }
 
 /*------------------------------fligh detial------------------------------*/
+.summarybtn{
+	padding:2px;
+	font-size: 18px;
+	border: 2x solid gray;
+	background-color: #7c7c7c;
+	opacity: 0.4;
+	width: 20%;
+	text-decoration: none;
+
+}
+.containertype-3{
+    padding-bottom: 120px;
+}
+
+
 img.flight-logo{
 
 	max-width: 100%;
@@ -168,7 +214,6 @@ img.flight-logo{
 	border-radius: 100px;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
-	/*background: url(http://link-to-your/image.jpg) no-repeat;*/
 	box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .2);
@@ -177,14 +222,12 @@ img.flight-logo{
 
 .box-of-flight{
 	background-color: rgba(255,255,255, .5);
-	
 }
 
 
 
 img.small-logo{
 	margin-top: 0.4rem;
-	/*margin-left: 2rem;*/
 }
 
 .selectBar{
@@ -198,15 +241,18 @@ img.small-logo{
 
 
 /*------------------------------Flight info--------------------------------*/
+.main-title{
+    font-weight:600px;
+}
+.centering{
+    text-align: center;
+}
 .input-group-addon.home{
     padding:0;
     margin-right: 1rem;
     border:0;
     background-color: rgba(0,0,0, .3);
-    width:30px;
-
-    
-    
+    width:30px;   
 }
 
 p.home{
@@ -242,7 +288,6 @@ p.home{
 .panel.panel-default{
 	background-color:white;
 	
-
 }
 
 .DatepickerCtrl2.input-group{
@@ -328,35 +373,111 @@ div.sideMenuCheck{
 	margin-left: 15px;
 }
 
+/*----------Animation-------------*/
+
 .animate-container {
-  list-style:none;
-  margin:0;
+    background: #ececec;
+    list-style:none;
+    margin:0;
 }
 
 .animate-repeat {
-  background: white;
-  line-height:25px;
-  list-style:none;
-  box-sizing:border-box;
+    list-style:none;
+    -webkit-transition-delay: 0s;
+    -webkit-transition: 1s linear all;
+    transition: 1s linear all;
 }
 
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
-  -webkit-transition:all linear 0.5s;
-  transition:all linear 0.5s;
+	-webkit-transition-delay: 0s;
+    -webkit-transition:all linear 1s;
+    transition:all linear 1s;
 }
 
 .animate-repeat.ng-leave.ng-leave-active,
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter {
-  opacity:0;
-  max-height:0;
+    opacity:0;
+    max-height:0;
 }
 
 .animate-repeat.ng-leave,
 .animate-repeat.ng-move.ng-move-active,
 .animate-repeat.ng-enter.ng-enter-active {
-  opacity:1;
-  max-height:40px;
+    opacity:1;
+    max-height:100%;
+}
+
+.animate-repeat.ng-leave-stagger {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0.5s;
+   -webkit-transition-duration: 0s;
+    transition-duration: 0.5s;
+}
+
+
+.animate-repeat.ng-enter-stagger {
+     -webkit-transition-delay: 0s;
+    transition-delay: 0.5s;
+   -webkit-transition-duration: 0s;
+    transition-duration: 0.5s;
+}
+
+
+/*----------Animation-------------*/
+
+.view-animate-container {
+  position:relative;
+  height:100%!important;
+/*  background:white;*/
+  height: 100%;
+/*  border:1px solid black;*/
+ 
+/*  overflow:hidden;*/
+}
+
+.view-animate {
+  padding:10px;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+  -webkit-transition:all cubic-bezier(0, 0, 0.1, 0.1) 0.5s;
+  transition:all cubic-bezier(0, 0, 0.1, 0.1) 0.5s;
+
+/*  display:block;*/
+  width:100%;
+  /*border-left:1px solid black;*/
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:10px;
+}
+
+.view-animate.ng-enter {
+  top:200%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  top:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  top:-200%;
+/*    display: none;*/
+}
+
+
+
+
+.popWindow{
+	height: 110%;
+	padding-top: 50%;
+	background-color: rgba(234,234,234,0.8);
+}
+
+.popWindow .popWindowText{
+	font-size:1.6rem; 
 }
