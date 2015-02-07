@@ -1,6 +1,7 @@
 flightinfoApp.controller('DropdownCtrl', function($scope, InfoService) {
 // ----------------------- Number of Adults ------------------------ 
     $scope.Adults = [
+      {name:'0'},
       {name:'1'},
       {name:'2'},
       {name:'3'},
@@ -28,6 +29,7 @@ flightinfoApp.controller('DropdownCtrl', function($scope, InfoService) {
 
 // ----------------------- Type of Class ------------------------ 
     $scope.FlightClass=[
+      {name:'Please Select...'},
       {name:'Economy'},
       {name:'Business'},
       {name:'First Class'}
@@ -52,6 +54,7 @@ flightinfoApp.controller('DropdownCtrl', function($scope, InfoService) {
 
 // ----------------------- Type of Stops ------------------------ 
     $scope.FlightStop=[
+      {name:'Please Select...'},
       {name:'Non-Stop'},
       {name:'One-Stop'},
       {name:'Two-Stop'}
@@ -77,6 +80,7 @@ flightinfoApp.controller('DropdownCtrl', function($scope, InfoService) {
 
 // ----------------------- Number of Adults ------------------------ 
     $scope.Kids = [
+      {name:'0'},
       {name:'1'},
       {name:'2'},
       {name:'3'},
